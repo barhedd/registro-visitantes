@@ -1,0 +1,82 @@
+﻿@page
+@model FormularioVisitantes.Pages.VisitorRegisterModel
+@{
+}
+
+<div class="w-full h-full grid grid-cols-2 p-8">
+    <div>
+        <p>Aquí va la imagen</p>
+    </div>
+
+    <div class="h-full flex justify-center items-center">
+        <form id="visitorForm" method="post" class="w-4/5 flex flex-col p-4 gap-4 border border-solid border-gray-400 rounded-md">
+            <div class="flex flex-col">
+                <div class="flex flex-col gap-1">
+                    <label for="Dui" class="font-semibold">DUI</label>
+                    <input asp-for="Dui" inputmode="numeric" maxlength="9" class="border border-solid border-blue-700 px-2 py-1 rounded-md" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                </div>
+
+                <span asp-validation-for="Dui" class="text-red-500 font-semibold"></span>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="flex flex-col gap-1">
+                    <label for="Nombre">Nombre</label>
+                    <input asp-for="Name" class="border border-solid border-blue-700 px-2 py-1 rounded-md" />
+                </div>
+
+                <span asp-validation-for="Name" class="text-red-500 font-semibold"></span>
+            </div>
+
+
+            <div class="flex flex-col">
+                <div class="flex flex-col gap-1">
+                    <label for="Email">Email</label>
+                    <input asp-for="Email" inputmode="email" class="border border-solid border-blue-700 px-2 py-1 rounded-md" />
+                </div>
+
+                <span asp-validation-for="Email" class="text-red-500 font-semibold"></span>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="flex flex-col gap-1">
+                    <label for="FechaNacimiento">Fecha de Nacimiento</label>
+                    <input asp-for="Birthday" type="date" class="border border-solid border-blue-700 px-2 py-1 rounded-md" />
+                </div>
+
+                <span asp-validation-for="Birthday" class="text-red-500 font-semibold"></span>
+            </div>
+
+
+            <div class="flex flex-col">
+                <div class="flex flex-col gap-1">
+                    <label for="Telefono">Teléfono</label>
+                    <input asp-for="Phone" inputmode="numeric" maxlength="8" class="border border-solid border-blue-700 px-2 py-1 rounded-md" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                </div>
+
+                <span asp-validation-for="Phone" class="text-red-500 font-semibold"></span>
+            </div>
+
+
+            <button type="submit" asp-page-handler="AddNewVisitor" class="bg-blue-700 px-4 py-2 text-white font-bold rounded-md">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    @if (Model.ShowModal)
+    {
+        <div id="successModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h2 class="text-lg font-bold text-green-600">¡Registro exitoso!</h2>
+                <p>El visitante ha sido registrado correctamente.</p>
+                <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-blue-700 text-white rounded">Aceptar</button>
+            </div>
+        </div>
+
+        <script>
+            function closeModal() {
+                document.getElementById("successModal").style.display = "none";
+            }
+        </script>
+    }
+</div>
