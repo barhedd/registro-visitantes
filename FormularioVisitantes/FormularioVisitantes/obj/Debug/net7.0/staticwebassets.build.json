@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LBgM5Ix4h9RHqEz6+FV59Ssq6nUBACa3eY0r+FGqe+I=",
+  "Hash": "nQFW5PQDmlaopbIOmFjoF8Uvxa/lSS5s4ibdtnAmMDo=",
   "Source": "FormularioVisitantes",
   "BasePath": "_content/FormularioVisitantes",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\eddy_\\OneDrive\\Escritorio\\PruebaTecnica-NET\\FormularioVisitantes\\FormularioVisitantes\\wwwroot\\img\\playa.jpg",
+      "SourceId": "FormularioVisitantes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\eddy_\\OneDrive\\Escritorio\\PruebaTecnica-NET\\FormularioVisitantes\\FormularioVisitantes\\wwwroot\\",
+      "BasePath": "_content/FormularioVisitantes",
+      "RelativePath": "img/playa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\playa.jpg"
     },
     {
       "Identity": "C:\\Users\\eddy_\\OneDrive\\Escritorio\\PruebaTecnica-NET\\FormularioVisitantes\\FormularioVisitantes\\wwwroot\\js\\site.js",

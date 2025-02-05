@@ -4,7 +4,14 @@ module.exports = {
         './Views/**/*.cshtml'
     ],
     theme: {
-        extends: {},
+        extend: {
+            colors: {
+                primary: {
+                    tint: '#293f67',
+                    DEFAULT: ' #112A56',
+                }
+            }
+        },
     },
     plugins: []
 }

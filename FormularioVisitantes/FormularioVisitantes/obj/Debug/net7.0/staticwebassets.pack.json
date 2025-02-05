@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\eddy_\\OneDrive\\Escritorio\\PruebaTecnica-NET\\FormularioVisitantes\\FormularioVisitantes\\wwwroot\\img\\playa.jpg",
+      "PackagePath": "staticwebassets\\img\\playa.jpg"
+    },
+    {
       "Id": "C:\\Users\\eddy_\\OneDrive\\Escritorio\\PruebaTecnica-NET\\FormularioVisitantes\\FormularioVisitantes\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

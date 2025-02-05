@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - FormularioVisitantes</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/TailwindPure.styles.css" asp-appennd-version="true" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
 </head>
 <body>
     <div class="w-full h-screen flex flex-col">
         <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <nav class="">
                 <div class="container">
                     <a class="navbar-brand" asp-area="" asp-page="/VisitorRegister">FormularioVisitantes</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -27,7 +26,7 @@
                                 <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </nav>
         </header>
@@ -36,12 +35,6 @@
             <main role="main" class="w-full h-full flex justify-center">
                 @RenderBody()
             </main>
-
-            <footer class="mt-auto">
-                <div class="container">
-                    &copy; 2025 - FormularioVisitantes - <a asp-area="" asp-page="/Privacy">Privacy</a>
-                </div>
-            </footer>
         </div>
     </div>
 

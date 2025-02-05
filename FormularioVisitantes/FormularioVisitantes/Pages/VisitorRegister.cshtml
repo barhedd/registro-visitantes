@@ -3,17 +3,23 @@
 @{
 }
 
-<div class="w-full h-full grid grid-cols-2 p-8">
-    <div>
-        <p>Aquí va la imagen</p>
+<div class="w-full h-full grid grid-cols-2">
+    <div class="h-full flex justify-center items-center beach-background">
     </div>
 
-    <div class="h-full flex justify-center items-center">
-        <form id="visitorForm" method="post" class="w-4/5 flex flex-col p-4 gap-4 border border-solid border-gray-400 rounded-md">
+    <div class="bg-[#112A56] h-full flex justify-center items-center">
+        <form id="visitorForm" method="post" class="bg-white/90 w-1/2 flex flex-col px-12 py-8 gap-4 border border-solid rounded-md">
             <div class="flex flex-col">
                 <div class="flex flex-col gap-1">
                     <label for="Dui" class="font-semibold">DUI</label>
-                    <input asp-for="Dui" inputmode="numeric" maxlength="9" class="border border-solid border-blue-700 px-2 py-1 rounded-md" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                    <input 
+                        asp-for="Dui" 
+                        value="@Model.Dui" 
+                        inputmode="numeric" 
+                        maxlength="9" 
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')" 
+                        class="border border-solid border-blue-700 px-2 py-1 rounded-md" 
+                     />
                 </div>
 
                 <span asp-validation-for="Dui" class="text-red-500 font-semibold"></span>
@@ -21,8 +27,12 @@
 
             <div class="flex flex-col">
                 <div class="flex flex-col gap-1">
-                    <label for="Nombre">Nombre</label>
-                    <input asp-for="Name" class="border border-solid border-blue-700 px-2 py-1 rounded-md" />
+                    <label for="Nombre" class="font-semibold">Nombre</label>
+                    <input 
+                        asp-for="Name" 
+                        value="@Model.Name"
+                        class="border border-solid border-blue-700 px-2 py-1 rounded-md" 
+                    />
                 </div>
 
                 <span asp-validation-for="Name" class="text-red-500 font-semibold"></span>
@@ -31,8 +41,13 @@
 
             <div class="flex flex-col">
                 <div class="flex flex-col gap-1">
-                    <label for="Email">Email</label>
-                    <input asp-for="Email" inputmode="email" class="border border-solid border-blue-700 px-2 py-1 rounded-md" />
+                    <label for="Email" class="font-semibold">Email</label>
+                    <input 
+                        asp-for="Email" 
+                        value="@Model.Email"
+                        inputmode="email" 
+                        class="border border-solid border-blue-700 px-2 py-1 rounded-md" 
+                     />
                 </div>
 
                 <span asp-validation-for="Email" class="text-red-500 font-semibold"></span>
@@ -40,8 +55,13 @@
 
             <div class="flex flex-col">
                 <div class="flex flex-col gap-1">
-                    <label for="FechaNacimiento">Fecha de Nacimiento</label>
-                    <input asp-for="Birthday" type="date" class="border border-solid border-blue-700 px-2 py-1 rounded-md" />
+                    <label for="FechaNacimiento" class="font-semibold">Fecha de Nacimiento</label>
+                    <input 
+                        asp-for="Birthday" 
+                        value="@Model.Birthday"
+                        type="date" 
+                        class="border border-solid border-blue-700 px-2 py-1 rounded-md" 
+                     />
                 </div>
 
                 <span asp-validation-for="Birthday" class="text-red-500 font-semibold"></span>
@@ -50,15 +70,22 @@
 
             <div class="flex flex-col">
                 <div class="flex flex-col gap-1">
-                    <label for="Telefono">Teléfono</label>
-                    <input asp-for="Phone" inputmode="numeric" maxlength="8" class="border border-solid border-blue-700 px-2 py-1 rounded-md" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                    <label for="Telefono" class="font-semibold">Teléfono</label>
+                    <input 
+                        asp-for="Phone" 
+                        value="@Model.Phone"
+                        inputmode="numeric" 
+                        maxlength="8" 
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        class="border border-solid border-blue-700 px-2 py-1 rounded-md" 
+                    />
                 </div>
 
                 <span asp-validation-for="Phone" class="text-red-500 font-semibold"></span>
             </div>
 
 
-            <button type="submit" asp-page-handler="AddNewVisitor" class="bg-blue-700 px-4 py-2 text-white font-bold rounded-md">Enviar</button>
+            <button type="submit" asp-page-handler="AddNewVisitor" class="bg-blue-700 hover:bg-blue-600 px-4 py-2 text-white font-bold rounded-md">Enviar</button>
         </form>
     </div>
 
